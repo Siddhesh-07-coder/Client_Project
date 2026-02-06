@@ -308,10 +308,14 @@ footer {
 
 /* Mobile nav behavior */
 @media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
     .menu-toggle {
         display: block;
-        text-align: center;
-        margin-top: 10px;
+        margin-top: 0;
     }
 
     nav ul {
@@ -325,4 +329,15 @@ footer {
         display: flex;
     }
 }
+
+/* =========================
+   Header top layout
+   ========================= */
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
