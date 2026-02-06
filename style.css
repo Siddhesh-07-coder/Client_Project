@@ -1,0 +1,295 @@
+/* CSS Variables for Color Palette */
+:root {
+    --primary-pink: #FFB6C1; /* Soft pink */
+    --secondary-purple: #E6E6FA; /* Light purple */
+    --accent-teal: #AFEEEE; /* Light teal */
+    --neutral-white: #FFFFFF; /* White */
+    --text-dark: #333333; /* Dark text for readability */
+    --shadow: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Web-safe font stack for readability */
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--neutral-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-pink);
+    color: var(--neutral-white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--neutral-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-teal);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+.hero {
+    background-color: var(--secondary-purple);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: var(--primary-pink);
+    color: var(--neutral-white);
+}
+
+.btn.primary:hover {
+    background-color: #FF8FAB; /* Darker pink on hover */
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: var(--accent-teal);
+    color: var(--text-dark);
+}
+
+.btn.secondary:hover {
+    background-color: #87CEEB; /* Darker teal on hover */
+    transform: translateY(-2px);
+}
+
+/* Doctor Profile */
+.doctor-profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.doctor-image .placeholder-image {
+    width: 200px;
+    height: 200px;
+    background-color: #CCCCCC; /* Gray placeholder */
+    border-radius: 10px;
+}
+
+.doctor-details h3 {
+    margin-bottom: 10px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background-color: var(--secondary-purple);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Clinic Info */
+.clinic-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+#success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--accent-teal);
+    color: var(--text-dark);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-pink);
+    color: var(--neutral-white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doctor-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .clinic-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
