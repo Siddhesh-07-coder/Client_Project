@@ -254,10 +254,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    /*nav ul {
         flex-direction: column;
         gap: 10px;
-    }
+    }*/
 
     .hero h2 {
         font-size: 2rem;
@@ -325,3 +325,4 @@ footer {
         display: flex;
     }
 }
+
