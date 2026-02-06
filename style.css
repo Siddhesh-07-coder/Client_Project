@@ -292,4 +292,36 @@ footer {
     section {
         padding: 40px 0;
     }
+
+}
+
+/* =========================
+   Mobile Navigation Menu
+   ========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--neutral-white);
+}
+
+/* Mobile nav behavior */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-pink);
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
 }
