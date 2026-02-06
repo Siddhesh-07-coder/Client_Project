@@ -204,6 +204,17 @@ input, textarea {
     font-size: 1rem;
 }
 
+input, textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.3);
+}
+
 .error {
     color: red;
     font-size: 0.9rem;
@@ -221,7 +232,28 @@ input, textarea {
 .hidden {
     display: none;
 }
+/* Appointment section background */
+#appointment {
+    background-color: var(--secondary-purple);
+}
+/* Appointment form card */
+#appointment-form {
+    background-color: var(--neutral-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    margin-top: 30px;
+}
+/* Appointment submit button */
+#appointment-form .btn.primary {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+}
 
+#appointment h2 {
+    text-align: center;
+}
 /* Footer */
 footer {
     background-color: var(--primary-pink);
@@ -339,5 +371,6 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+
 
 
