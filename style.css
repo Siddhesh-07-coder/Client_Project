@@ -464,6 +464,35 @@ footer > .container > p {
     align-items: center;
 }
 
+/* =========================
+   WhatsApp Floating Button
+   ========================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: #fff;
+
+    border-radius: 50%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 55px;
+
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+
+
 
 
 
