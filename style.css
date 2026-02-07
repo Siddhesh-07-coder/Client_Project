@@ -73,6 +73,15 @@ section {
     padding: 100px 0;
 }
 
+/* About Doctor section background */
+#about-doctor {
+    background-color: #fdf7f9;
+}
+
+#appointment {
+    background-color: var(--secondary-purple);
+}
+
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -122,22 +131,37 @@ section {
 }
 
 /* Doctor Profile */
+/* Doctor profile card *//*2*/
 .doctor-profile {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-top: 30px;
+
+    background-color: var(--neutral-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .doctor-image .placeholder-image {
     width: 200px;
     height: 200px;
-    background-color: #CCCCCC; /* Gray placeholder */
-    border-radius: 10px;
+    background-color: #CCCCCC;
+    /* Gray placeholder */
+    border-radius: 50%;
 }
 
+/* Doctor details typography */
 .doctor-details h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.doctor-details p {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 /* Services Grid */
@@ -318,6 +342,13 @@ footer {
     .doctor-profile {
         flex-direction: column;
         text-align: center;
+        padding: 20px;      /* reduce bulk */
+        gap: 20px;
+    }
+
+    .doctor-image .placeholder-image {
+        width: 160px;
+        height: 160px;
     }
 
     .clinic-details {
@@ -340,6 +371,10 @@ footer {
         font-size: 0.9rem;
     }
 
+}
+
+#about-doctor h2 {
+    text-align: center;
 }
 
 .social-link {
@@ -414,6 +449,7 @@ footer > .container > p {
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 
