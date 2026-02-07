@@ -77,23 +77,41 @@ function validateEmail() {
 }
 
 // Form submission handler
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent actual form submission
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
     const isNameValid = validateName();
     const isPhoneValid = validatePhone();
     const isEmailValid = validateEmail();
-    
-    if (isNameValid && isPhoneValid && isEmailValid) {
-        // Simulate successful submission (no backend)
-        successMessage.classList.remove('hidden');
-        form.reset(); // Clear the form
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successMessage.classList.add('hidden');
-        }, 5000);
+
+    if (!isNameValid || !isPhoneValid || !isEmailValid) {
+        return;
     }
 
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            successMessage.classList.remove("hidden");
+            form.reset();
+
+            setTimeout(() => {
+                successMessage.classList.add("hidden");
+            }, 5000);
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    })
+    .catch(() => {
+        alert("Network error. Please try again later.");
+    });
 });
+
 
 // Mobile menu toggle
 const menuToggle = document.getElementById("menu-toggle");
@@ -108,3 +126,4 @@ document.querySelectorAll('#nav-links a').forEach(link => {
         navLinks.classList.remove('show');
     });
 });
+
