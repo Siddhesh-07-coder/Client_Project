@@ -126,7 +126,12 @@
         <section id="appointment" class="fade-in">
             <div class="container">
                 <h2>Book an Appointment</h2>
-                <form id="appointment-form">
+                <form id="appointment-form" action="https://formspree.io/f/xbdajyor" method="POST">
+                    <input 
+                        type="hidden" 
+                        name="_subject" 
+                        value="New Appointment Request - Meeti Women Clinic"
+                    >
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -206,6 +211,7 @@
 </body>
 
 </html>
+
 
 
 
